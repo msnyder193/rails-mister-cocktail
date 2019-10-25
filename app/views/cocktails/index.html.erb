@@ -1,0 +1,13 @@
+<%= render "partials/navbar" %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+  <div class="container">
+    <h1>View All Your Cocktails</h1>
+
+  </div>
+</div>
+
+<% @cocktails.each do |cocktail| %>
+  <%= link_to cocktail.name, cocktail_path(cocktail) %>
+<% end %>
+<%= link_to "create cocktail", new_cocktail_path %>
+    <a class="btn btn-flat" href="#">Apply now</a>
