@@ -1,13 +1,36 @@
-<%= render "partials/navbar" %>
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
-  <div class="container">
-    <h1>View All Your Cocktails</h1>
+<%#= render "partials/navbar" %>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-9 full-height" style="background: url(<%= asset_path 'clarene-lalata-_XeL4F9e6aY-unsplash.jpg' %>); background-size: cover;">
+      <div class="center">
+        <h1>booze verb</h1>
+        <p>\ ˈbüz  \</p>
+        <h3>boozed; boozing</h3>
+        <p>Definition of booze</p>
+        <p>intransitive verb</p>
 
+        <p>: to drink intoxicating liquor
+        especially to excess —often used in the phrase
+        <strong>booze it up</strong></p>
+      </div>
+    </div>
+    <div class="col-lg-3 full-height" style="background-color:black;">
+      <div id="carousel">
+        <button id="prev">&uarr; Prev</button>
+        <% @cocktails.each do |cocktail| %>
+          <!-- <div class="card-img-top"> -->
+            <div class="card-img-top">
+              <%= link_to cocktail.name, cocktail_path(cocktail) %>
+            </div>
+        <% end %>
+        <button id="next">&darr; Next</button>
+      </div>
+
+      <%#= link_to "create cocktail", new_cocktail_path %>
+    </div>
   </div>
 </div>
 
-<% @cocktails.each do |cocktail| %>
-  <%= link_to cocktail.name, cocktail_path(cocktail) %>
-<% end %>
-<%= link_to "create cocktail", new_cocktail_path %>
-    <a class="btn btn-flat" href="#">Apply now</a>
+
+
+

@@ -1,3 +1,62 @@
 // Import page-specific CSS files here.
 @import "home";
 @import "cocktails";
+
+.full-height {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h3, p, h1 {
+    margin-bottom: 0;
+    color:white;
+  }
+}
+body {
+  font-family: sans-serif;
+}
+.buttons {
+  margin: 5px 0;
+}
+button {
+  font-size: 14px;
+  display: inline;
+  padding: 3px 6px;
+  border: 2px solid #ccc;
+  background: #fff;
+  border-radius: 5px;
+  outline: none;
+}
+button:hover {
+  border: 2px solid #888;
+  background: #ffe;
+  cursor: pointer;
+}
+#carouselWrapper {
+  position: relative;
+  overflow: hidden;
+  height: 100vh !important;
+  width: 100% !important;
+}
+#carousel {
+  position: absolute;
+  // visibility: hidden;
+  overflow: hidden;
+  width: 100% !important;
+  height: 100vh !important;
+}
+.pictureFrame{
+  width:100% !important;
+  height: 100% !important;
+}
+.card-img-top{
+  height: 30% !important;
+  width: 100% !important;
+  background-color: white;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
