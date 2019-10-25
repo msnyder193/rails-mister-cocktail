@@ -14,7 +14,7 @@
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-
+import 'bootstrap';
 console.log('Hello World from Webpacker')
 var Carousel = {
   width: 100,     // Images are forced into a width of this many pixels.
