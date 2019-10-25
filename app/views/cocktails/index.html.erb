@@ -2,6 +2,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-lg-9 full-height" style="background: url(<%= asset_path 'clarene-lalata-_XeL4F9e6aY-unsplash.jpg' %>); background-size: cover;">
+      <div class="generate"> <%= link_to "Generate Booze", new_cocktail_path %></div>
       <div class="center">
         <h1><strong>Booze</strong> <small>verb</small></h1>
         <p>\ ˈbüz  \</p>
@@ -12,21 +13,30 @@
         <p>: to drink intoxicating liquor
         especially to excess —often used in the phrase
         <strong>booze it up</strong></p>
+
       </div>
     </div>
     <div class="col-lg-3 full-height" style="background-color:black;">
       <div id="carousel">
         <button id="prev">&uarr; Prev</button>
+
         <% @cocktails.each do |cocktail| %>
           <!-- <div class="card-img-top"> -->
-            <div class="card-img-top">
-              <%= link_to cocktail.name, cocktail_path(cocktail) %>
-            </div>
+              <div class="card-container">
+                  <div class="card card--dark">
+                          <div class="card--hover">
+                              <%= link_to cocktail.name, cocktail_path(cocktail) %>
+                              <p class="booze"><%= (a..z).rand %></p>
+                          </div>
+                      </a>
+                      <div class="card--border"></div>
+                  </div>
+              </div>
+
         <% end %>
         <button id="next">&darr; Next</button>
       </div>
 
-      <%= link_to "create cocktail", new_cocktail_path %>
     </div>
   </div>
 </div>
