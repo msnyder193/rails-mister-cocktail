@@ -15,7 +15,7 @@
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 import 'bootstrap';
-console.log('Hello World from Webpacker')
+
 var Carousel = {
   width: 100,     // Images are forced into a width of this many pixels.
   numVisible: 2,  // The number of images visible at once.
@@ -60,12 +60,10 @@ function animate(begin, end, finalTask) {
 }
 
 window.onload = function () {
-  // document.getElementById('spinner').style.display = 'none';
   var carousel = Carousel.carousel = document.getElementById('carousel'),
       images = carousel.getElementsByTagName('img'),
       numImages = images.length,
       imageWidth = Carousel.width,
-      aspectRatio = images[0].width / images[0].height,
       imageHeight = imageWidth / aspectRatio,
       padding = Carousel.padding,
       rowHeight = Carousel.rowHeight = imageHeight + 2 * padding;

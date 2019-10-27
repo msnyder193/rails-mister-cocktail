@@ -23,6 +23,10 @@ body {
 }
 .booze{
   font-family: BoozeBats;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 326px;
+  font-size: 13vw;
 }
 .buttons {
   margin: 5px 0;
@@ -57,17 +61,6 @@ button:hover {
 .pictureFrame{
   width:100% !important;
   height: 100% !important;
-}
-.card-img-top{
-  height: 30% !important;
-  width: 100% !important;
-  background-color: white;
-  margin-bottom: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-
 }
 $highlight: #5bc0eb;
 $darkhighlight: #fde74c;
