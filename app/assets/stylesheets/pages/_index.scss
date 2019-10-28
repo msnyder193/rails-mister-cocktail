@@ -7,6 +7,8 @@
   src:font-url('boozb.TTF') format('truetype')
 }
 
+a { color: inherit; }
+
 .full-height {
   height: 100vh;
   display: flex;
@@ -18,6 +20,19 @@
     text-shadow: 3px 3px 5px rgba(128, 128, 133, 0.62);
   }
 }
+#prev{
+  position: absolute;
+  top: 0;
+  right: -29px;
+  z-index: 10;
+}
+#next{
+  position:absolute;
+  bottom:0;
+  right:-29px;
+  z-index: 10;
+}
+
 body {
   font-family: sans-serif;
 }
